@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "projects": {
+    "clown-management-system": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/clown-management-system",
+      "sourceRoot": "apps/clown-management-system/src",
+      "prefix": "dominikgaller",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/clown-management-system",
+            "index": "apps/clown-management-system/src/index.html",
+            "main": "apps/clown-management-system/src/main.ts",
+            "polyfills": "apps/clown-management-system/src/polyfills.ts",
+            "tsConfig": "apps/clown-management-system/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/clown-management-system/src/favicon.ico",
+              "apps/clown-management-system/src/assets"
+            ],
+            "styles": ["apps/clown-management-system/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/clown-management-system/src/environments/environment.ts",
+                  "with": "apps/clown-management-system/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "clown-management-system:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "clown-management-system:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "clown-management-system:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/clown-management-system/tsconfig.app.json",
+              "apps/clown-management-system/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/clown-management-system/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/clown-management-system/jest.config.js",
+            "tsConfig": "apps/clown-management-system/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/clown-management-system/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "clown-management-system-e2e": {
+      "root": "apps/clown-management-system-e2e",
+      "sourceRoot": "apps/clown-management-system-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/clown-management-system-e2e/cypress.json",
+            "tsConfig": "apps/clown-management-system-e2e/tsconfig.e2e.json",
+            "devServerTarget": "clown-management-system:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "clown-management-system:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/clown-management-system-e2e/tsconfig.e2e.json"],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/clown-management-system-e2e/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "clown-management-system"
+}
