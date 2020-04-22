@@ -25,6 +25,15 @@
     "clown-management-system-e2e": {
       "tags": [],
       "implicitDependencies": ["clown-management-system"]
+    },
+    "rest-services": {
+      "tags": []
+    },
+    "services": {
+      "tags": []
+    },
+    "create-clown-component": {
+      "tags": []
     }
   }
 }

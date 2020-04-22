@@ -129,6 +129,102 @@
           }
         }
       }
+    },
+    "rest-services": {
+      "projectType": "library",
+      "root": "libs/rest-services",
+      "sourceRoot": "libs/rest-services/src",
+      "prefix": "dominikgaller",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/rest-services/tsconfig.lib.json",
+              "libs/rest-services/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/rest-services/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/rest-services/jest.config.js",
+            "tsConfig": "libs/rest-services/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/rest-services/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "services": {
+      "projectType": "library",
+      "root": "libs/services",
+      "sourceRoot": "libs/services/src",
+      "prefix": "dominikgaller",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/services/tsconfig.lib.json",
+              "libs/services/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/services/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/services/jest.config.js",
+            "tsConfig": "libs/services/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/services/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "create-clown-component": {
+      "projectType": "library",
+      "root": "libs/create-clown-component",
+      "sourceRoot": "libs/create-clown-component/src",
+      "prefix": "dominikgaller",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/create-clown-component/tsconfig.lib.json",
+              "libs/create-clown-component/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/create-clown-component/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/create-clown-component/jest.config.js",
+            "tsConfig": "libs/create-clown-component/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/create-clown-component/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

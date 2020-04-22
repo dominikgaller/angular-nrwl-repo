@@ -15,7 +15,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dominikgaller/rest-services": ["libs/rest-services/src/index.ts"],
+      "@dominikgaller/services": ["libs/services/src/index.ts"],
+      "@dominikgaller/create-clown-component": [
+        "libs/create-clown-component/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
