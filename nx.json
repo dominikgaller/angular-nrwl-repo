@@ -37,6 +37,9 @@
     },
     "clown-api-model": {
       "tags": []
+    },
+    "material-ui": {
+      "tags": []
     }
   }
 }

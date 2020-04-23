@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { MaterialUiModule } from '@dominikgaller/material-ui';
 import { NgxsModule } from '@ngxs/store';
 import { CreateClownContainerComponent } from './create-clown-container/create-clown-container.component';
 import { CreateClownFormComponent } from './create-clown-form/create-clown-form.component';
 import { GenericInputComponent } from './generic-form/generic-input/generic-input.component';
-import { MaterialModule } from './material/material.module';
 import { allClownStates } from './states';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { allClownStates } from './states';
   imports: [
     BrowserAnimationsModule,
     CommonModule,
-    MaterialModule,
+    MaterialUiModule,
     ReactiveFormsModule,
     RouterModule.forChild([
       {
