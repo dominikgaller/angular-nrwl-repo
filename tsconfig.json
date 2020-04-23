@@ -16,11 +16,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dominikgaller/rest-services": ["libs/rest-services/src/index.ts"],
-      "@dominikgaller/services": ["libs/services/src/index.ts"],
-      "@dominikgaller/create-clown-component": [
-        "libs/create-clown-component/src/index.ts"
-      ]
+      "@dominikgaller/clown/api/rest-services": ["libs/clown/api/rest-services/src/index.ts"],
+      "@dominikgaller/clown/api/services": ["libs/clown/api/services/src/index.ts"],
+      "@dominikgaller/clown/component/create-clown-component": [
+        "libs/clown/component/create-clown-component/src/index.ts"
+      ],
+      "@dominikgaller/clown/api/model": ["libs/clown/api/model/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

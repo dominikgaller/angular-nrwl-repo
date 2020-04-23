@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+$cms-primary: mat-palette($mat-blue, 500);
+$cms-accent: mat-palette($mat-blue, 800);
+$cms-warn: mat-palette($mat-red);
+$cms-theme: mat-light-theme($cms-primary, $cms-accent, $cms-warn);
+@include angular-material-theme($cms-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+mat-card {
+  max-width: 30rem;
+  margin: 2rem auto;
+  h1 {
+    text-align: center;
+  }
+  mat-form-field {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+    margin-top: 0.375rem;
+  }
+  .mat-stepper-horizontal {
+    text-align: right;
+    max-width: 30rem;
+    margin: 2rem auto;
+  }
+  table {
+    width: 100%;
+  }
+}

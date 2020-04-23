@@ -1,0 +1,39 @@
+<form [formGroup]="createClownForm" (ngSubmit)="onSubmit()">
+  <app-generic-input
+    label="Are you a clown"
+    type="select"
+    [form]="createClownForm"
+    required="true"
+    [values]="clownValues"
+    formControlName="isClown"
+  ></app-generic-input>
+
+  <app-generic-input
+    label="What clown are you?"
+    [form]="createClownForm"
+    placeholder="What clown are you?"
+    formControlName="clown"
+    [required]="isAClown()"
+  ></app-generic-input>
+
+  <app-generic-input
+    label="Forename"
+    [form]="createClownForm"
+    placeholder="Forename"
+    formControlName="forename"
+    required="true"
+  ></app-generic-input>
+
+  <app-generic-input
+    label="Name"
+    [form]="createClownForm"
+    placeholder="Name"
+    formControlName="name"
+    required="true"
+  ></app-generic-input>
+
+  <div class="button-bar">
+    <button mat-flat-button color="primary" type="submit" [disabled]="!createClownForm.valid">Submit</button>
+    <button mat-flat-button color="primary" type="reset">Reset</button>
+  </div>
+</form>

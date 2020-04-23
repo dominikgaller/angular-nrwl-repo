@@ -1,0 +1,22 @@
+<mat-form-field appearance="outline" [formGroup]="form">
+  <mat-label>{{label}}</mat-label>
+  <input
+    matInput
+    *ngIf="isText()"
+    #input
+    [placeholder]="placeholder"
+    [formControlName]="formControlName"
+    [required]="required"
+  >
+  <mat-select
+    *ngIf="isSelect()"
+    [required]="required"
+    [formControlName]="formControlName"
+  >
+    <mat-option
+      *ngFor="let value of values" [value]="value">
+      <!-- TODO SOLOVE VIEW_VALUE -->
+      {{value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
