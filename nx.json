@@ -26,19 +26,22 @@
       "tags": [],
       "implicitDependencies": ["clown-management-system"]
     },
-    "rest-services": {
+    "clown-rest-services": {
       "tags": []
     },
-    "services": {
+    "clown-services": {
       "tags": []
     },
-    "create-clown-component": {
+    "clown-create-clown-component": {
       "tags": []
     },
     "clown-api-model": {
       "tags": []
     },
     "material-ui": {
+      "tags": []
+    },
+    "util-generic-form": {
       "tags": []
     }
   }

@@ -4,9 +4,7 @@ import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { AddClown, ClownSelectors } from '../states/clown';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ClownFacadeService {
 
   @Select(ClownSelectors.allClowns) allClowns$: Observable<Clown[]>;

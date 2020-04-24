@@ -1,9 +1,9 @@
-import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, Self, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges, OnInit, Self, SimpleChanges, ViewChild } from '@angular/core';
 import { ControlValueAccessor, FormGroup, NgControl, ValidatorFn, Validators } from '@angular/forms';
-import { InputTypesEnum } from './input-types.enum';
+import { InputTypesEnum } from '../model/input-types.enum';
 
 @Component({
-  selector: 'app-generic-input',
+  selector: 'dominikgaller-generic-input',
   templateUrl: './generic-input.component.html',
   styleUrls: ['./generic-input.component.scss'],
   providers: [
@@ -33,6 +33,7 @@ import { InputTypesEnum } from './input-types.enum';
   NG_VALUE_ACCESSOR implementation.
  */
 export class GenericInputComponent implements OnInit, OnChanges, ControlValueAccessor {
+
   @Input() type = InputTypesEnum.TEXT;
   @Input() label: string;
   @Input() placeholder: string;

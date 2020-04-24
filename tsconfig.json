@@ -26,7 +26,10 @@
         "libs/clown/component/create-clown-component/src/index.ts"
       ],
       "@dominikgaller/clown/api/model": ["libs/clown/api/model/src/index.ts"],
-      "@dominikgaller/material-ui": ["libs/material-ui/src/index.ts"]
+      "@dominikgaller/material-ui": ["libs/material-ui/src/index.ts"],
+      "@dominikgaller/util/generic-form": [
+        "libs/util/generic-form/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

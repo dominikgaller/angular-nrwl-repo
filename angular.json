@@ -295,6 +295,38 @@
           "style": "scss"
         }
       }
+    },
+    "util-generic-form": {
+      "projectType": "library",
+      "root": "libs/util/generic-form",
+      "sourceRoot": "libs/util/generic-form/src",
+      "prefix": "dominikgaller",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/util/generic-form/tsconfig.lib.json",
+              "libs/util/generic-form/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/util/generic-form/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/util/generic-form/jest.config.js",
+            "tsConfig": "libs/util/generic-form/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/util/generic-form/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

@@ -1,6 +1,6 @@
 import { Clown } from '@dominikgaller/clown/api/model';
 import { Selector } from '@ngxs/store';
-import { ClownState } from './clown-state.service';
+import { ClownState } from './clown.state';
 import { ClownStateModel } from './clown-state.model';
 
 

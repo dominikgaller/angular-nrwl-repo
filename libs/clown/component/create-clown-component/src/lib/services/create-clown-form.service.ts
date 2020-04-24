@@ -22,6 +22,8 @@ export class CreateClownFormService {
     const clown: Clown = {} as Clown;
     clown.forename = createClownForm.get('forename').value;
     clown.name = createClownForm.get('name').value;
+    clown.isAClown = createClownForm.get('isClown').value;
+    clown.clownType = createClownForm.get('clown').value || 'No type given';
     return clown;
   }
 }

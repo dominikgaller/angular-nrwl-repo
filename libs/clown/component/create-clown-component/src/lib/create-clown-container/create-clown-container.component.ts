@@ -2,13 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ClownFacadeService } from '../services/clown-facade.service';
 import { CreateClownFormService } from '../services/create-clown-form.service';
+import { IsAClownService } from '../services/is-a-clown.service';
 
 @Component({
   selector: 'dominikgaller-clown-creation-container',
   templateUrl: './create-clown-container.component.html',
   styleUrls: ['./create-clown-container.component.scss'],
   providers: [
-    CreateClownFormService
+    CreateClownFormService,
+    IsAClownService,
+    ClownFacadeService
   ]
 })
 export class CreateClownContainerComponent implements OnInit {
