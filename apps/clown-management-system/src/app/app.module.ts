@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { UiKitModule } from '@dominikgaller/ui-kit';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsModule } from '@ngxs/store';
@@ -14,6 +15,7 @@ import { AppRoutingModule } from './router/app-routing.module';
     BrowserModule,
     AppRoutingModule,
     CreateClownComponentModule,
+    UiKitModule,
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
     NgxsModule.forRoot([], { developmentMode: true,

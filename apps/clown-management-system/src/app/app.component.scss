@@ -1,19 +1,1 @@
 @import "../styles.scss";
-
-header {
-  width: 100%;
-  background-color: mat-color($cms-primary);
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-  height: 3.5rem;
-  padding: 0.625rem 2rem;
-  h2 {
-    float: left;
-    margin: 0;
-    font-size: 1.7rem;
-    color: white;
-    font-weight: 100;
-  }
-  button {
-    float: right;
-  }
-}

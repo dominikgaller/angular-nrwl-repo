@@ -43,6 +43,9 @@
     },
     "util-generic-form": {
       "tags": []
+    },
+    "ui-kit": {
+      "tags": []
     }
   }
 }

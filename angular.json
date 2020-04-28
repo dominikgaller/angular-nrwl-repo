@@ -327,6 +327,38 @@
           "style": "scss"
         }
       }
+    },
+    "ui-kit": {
+      "projectType": "library",
+      "root": "libs/ui-kit",
+      "sourceRoot": "libs/ui-kit/src",
+      "prefix": "dominikgaller",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-kit/tsconfig.lib.json",
+              "libs/ui-kit/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-kit/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-kit/jest.config.js",
+            "tsConfig": "libs/ui-kit/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ui-kit/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

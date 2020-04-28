@@ -29,7 +29,8 @@
       "@dominikgaller/material-ui": ["libs/material-ui/src/index.ts"],
       "@dominikgaller/util/generic-form": [
         "libs/util/generic-form/src/index.ts"
-      ]
+      ],
+      "@dominikgaller/ui-kit": ["libs/ui-kit/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
